@@ -13,12 +13,12 @@ Vue.js 2 Study group for internal staff members
 ## Curriculum
 - Round #1 : Webpack, ES6 and a bit of Vue.js concept (May 31 - June 9, 2017)
   - Jaeman & Hyunsun : Webpack
-  - Seongmi & Pangyo : ES6
+  - Seongmi & Keehyo : ES6
 
 - Round #2 : Vue.js Essentials + Advanced (June 12 - June 20, 2017)
   - All : [Vue Instance](https://vuejs.org/v2/guide/instance.html), [Computed probs and watchers](https://vuejs.org/v2/guide/computed.html), [List Rendering](https://vuejs.org/v2/guide/list.html), [Components](https://vuejs.org/v2/guide/components.html), [Form Input Bindings](https://vuejs.org/v2/guide/forms.html)
   - Jaeman & Hyunsun : [Reactivity in Depth](https://vuejs.org/v2/guide/reactivity.html)
-  - Seongmi & Pangyo : [Transition Effects](https://vuejs.org/v2/guide/transitions.html)
+  - Seongmi & Keehyo : [Transition Effects](https://vuejs.org/v2/guide/transitions.html)
 
 - Round #3 : Vue.js Server Side Rendering, State Management, Mixins, ...
 
