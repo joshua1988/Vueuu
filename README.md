@@ -20,7 +20,10 @@ Vue.js 2 Study group for internal staff members
   - Jaeman & Hyunsun : [Reactivity in Depth](https://vuejs.org/v2/guide/reactivity.html)
   - Seongmi & Keehyo : [Transition Effects](https://vuejs.org/v2/guide/transitions.html)
 
-- Round #3 : Vue.js Server Side Rendering, State Management, Mixins, ...
+- Round #3 : Simple Todo App with Vue.js (June 21 - July 4)
+  - Data Storage : Local Storage
+
+- Round #? : Vue.js Server Side Rendering, State Management, Mixins, ...
 
 ## How to study?
 - **Read** the contents, **Understand** how it works and **Implement** it by making samples.
