@@ -32,7 +32,7 @@ nums.forEach(v => {
        fives.push(v)
 })
 ```
-* `this` 문법
+* `this` 문
 
 ```javascript
 // Lexical this
