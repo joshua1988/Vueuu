@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>todo-list</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="col s12">
+      <h1 class="header center orange-text">Items to do</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">할 일을 남기고 관리하세요.</h5>
+      </div>
+      <div class="row" id="toToList">
+        <span v-for="(item, index) in items">
+          <span v-if='index%2==0'>
+            <div class="card-panel teal lighten-2 z-depth-3 list-complete-item" :id="toModifyId(item.index)">
+              <strong>{{ toNumber(item.index) }}.</strong> {{ item.contents }} <span class="right"><span  style="font-style: italic">{{ item.date }}</span> <i class="material-icons tiny" title="수정" style="cursor: pointer" v-on:click="modifyFormItem(item, index)">mode_edit</i><i class="material-icons tiny" style="cursor: pointer" title="삭제" onclick="Materialize.toast('Selected Item is removed!', 3000);" v-on:click="deleteItem(item, index)">clear</i></span>
+            </div>
+          </span>
+          <span v-if='index%2==1'>
+            <div class="card-panel lime lighten-2 z-depth-3 list-complete-item" :id="toModifyId(item.index)">
+              <strong>{{ toNumber(item.index) }}.</strong> {{ item.contents }} <span class="right"><span  style="font-style: italic">{{ item.date }}</span> <i class="material-icons tiny" title="수정" style="cursor: pointer" v-on:click="modifyFormItem(item, index)">mode_edit</i><i class="material-icons tiny" style="cursor: pointer" title="삭제" onclick="Materialize.toast('Selected Item is removed!', 3000);" v-on:click="deleteItem(item, index)">clear</i></span>
+            </div>
+          </span>
+        </span>
+      </div>
+      <div class="row" id="toAddItem">
+        <div class="field__input-wrapper">
+          <input placeholder="할 일을 등록하세요." class="field__input" size="30" type="text" id="contents" v-model="message" /><a class="waves-effect waves-purple lime btn" onclick="Materialize.toast('New Item\'s registration is completed!', 3000);" v-on:click="addItem">등록</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://unpkg.com/vue"></script>
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+  <script src="index.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.tooltipped').tooltip({delay: 50, position: 'bottom'});
+    });
+  </script>
+</body>
+
+</html>
