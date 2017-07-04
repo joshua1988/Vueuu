@@ -2,7 +2,7 @@
 if (!(typeof(Storage) !== "undefined")) {
   alert("Your Browser isn't supported LocalStorage!!");
 } else {
-  console.log("Your Browser is supported LocalStorage!!")
+  console.log("Your Browser is supported LocalStorage!!");
 }
 
 // Local Storage API extension.
