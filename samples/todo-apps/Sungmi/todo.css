@@ -1,0 +1,13 @@
+  [v-cloak] { display: none; }
+
+  body {
+    text-align: left;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  input {
+    border-style: groove;
+    width: 200px;
+  }
+  button {
+    border-style: groove;
+  }
