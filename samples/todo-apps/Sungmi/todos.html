@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>Todo</title>
+  <link rel="stylesheet" href="todo.css">
+<head>
+<body>
+  <section class="todoapp">
+    <header>
+      <h1>Todo</h1>
+    </header>
+    <input type="text"
+      placeholder="Type what you have to do"
+      v-model="newTodo"
+      @keyup.enter="addTodo">
+
+    <section class="main" v-show="todos.length" v-cloak>
+      <ul class="todo-list">
+        <li v-for="todo in todoItems"
+          class="todo"
+          :key="todo.id"
+          :class="{ editing: todo == editedTodo }">
+          <div class="view">
+            <label @dblclick="editTodo(todo)">{{ todo.title }}</label>
+            <button @click="removeTodo(todo)">Delete</button>
+          </div>
+          <!--
+          <input type="text"
+            v-model="todo.title"
+            v-todo-focus="todo == editedTodo"
+            @blur="doneEdit(todo)"
+            @keyup.enter="doneEdit(todo)"
+            @keyup.esc="cancelEdit(todo)">
+          -->
+        </li>
+      </ul>
+    </section>
+    <footer v-show="todos.length" v-cloak>
+      <button @click="removeAll">Clear All</button>
+    </footer>
+  </section>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script src="app.js"></script>
+
+</html>
