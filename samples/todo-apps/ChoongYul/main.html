@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=".\lib\font-awesome-4.7.0\css\font-awesome.min.css">
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="D:\Atom_Project\TO-DO-Basic\lib\font-awesome-4.7.0\css\font-awesome.min.css">
+    <style>
+      a {
+        color : #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Title -->
+      <div class="row">
+          <a href="todolist.html">
+            <h1>To Do List</h1>
+          </a>
+      </div>
+
+      <!-- Body -->
+      <div class="row">
+        <div id="todo-list" class="col-sm-6">
+          <hr>
+          <p id="enter">Write and Press Enter</p>
+          <p class="inputarea">
+            <input type="text" id="inputText" placeholder="What to do" v-on:keyup.enter="addItem" v-model="newTodo"/>
+          </p>
+          <ul>
+            <li
+              is="todo-item"
+              v-for="(todo, index) in todos"
+              v-bind:key="todo.id"
+              v-bind:title="todo.itemContents"
+              v-on:delete-event="deleteItem(index, todos)"
+              v-on:modify-event="modifyItem(index, todo)"
+            ></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+  </body>
+</html>
