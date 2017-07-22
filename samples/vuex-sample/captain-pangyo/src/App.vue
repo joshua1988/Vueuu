@@ -11,6 +11,9 @@
         </ul>
       </div>
     </section>
+    <section class="vuex-namespacing">
+      {{ doubleCounter }}
+    </section>
   </div>
 </template>
 
